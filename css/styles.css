@@ -1,3 +1,5 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -41,6 +43,7 @@
       --small-font-size: .875rem;
       --smaller-font-size: .813rem; } }
 
+/*========== Variable Dark Theme ==========*/
 /*========== BASE ==========*/
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
@@ -48,3 +51,235 @@
 
 html {
   scroll-behavior: smooth; }
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  line-height: 1.6; }
+
+h1, h2, h3, p, ul {
+  margin: 0; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+/*========== Button Dark/Light ==========*/
+/*========== CLASS CSS ==========*/
+.section {
+  padding: 4rem 0 2rem; }
+
+.section-title, .section-subtitle {
+  text-align: center; }
+
+.section-title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-3); }
+
+.section-subtitle {
+  display: block;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-1); }
+
+/*========== LAYOUT ==========*/
+.bd-container {
+  max-width: 960px;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2); }
+
+.bd-grid {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5rem; }
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color); }
+
+/*========== NAV ==========*/
+.nav {
+  max-width: 1024px;
+  height: var(--header-height);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0 1rem;
+    text-align: center;
+    background-color: var(--body-color);
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: var(--z-fixed); } }
+
+.nav__item {
+  margin-bottom: var(--mb-2); }
+
+.nav__link,
+.nav__logo,
+.nav__toggle {
+  color: var(--text-color);
+  font-weight: var(--font-medium); }
+
+.nav__logo:hover {
+  color: var(--first-color); }
+
+.nav__link {
+  -webkit-transition: .3s;
+  transition: .3s; }
+  .nav__link:hover {
+    color: var(--first-color); }
+
+.nav__toggle {
+  font-size: 1.3rem;
+  cursor: pointer; }
+
+/* Show menu */
+.show-menu {
+  top: var(--header-height); }
+
+/* Active menu */
+.active-link {
+  color: var(--first-color); }
+
+/* Change background header */
+.scroll-header {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+
+/* Scroll top */
+.scrolltop {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .3rem;
+  background: rgba(6, 156, 84, 0.5);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  -webkit-transition: .4s;
+  transition: .4s;
+  visibility: hidden; }
+  .scrolltop:hover {
+    background-color: var(--first-color-alt); }
+
+.scrolltop__icon {
+  font-size: 1.7rem;
+  color: var(--body-color); }
+
+/* Show scrolltop */
+.scroll-top {
+  visibility: visible;
+  bottom: 1.5rem; }
+
+/*============ HOME ============*/
+.home__container {
+  height: calc(100vh - var(--header-height));
+  -ms-flex-line-pack: center;
+      align-content: center; }
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-1); }
+
+.home__subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-4); }
+
+.home__img {
+  width: 300px;
+  -ms-grid-column-align: center;
+      justify-self: center; }
+
+/*============ BUTTONS ============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  -webkit-transition: .3s;
+  transition: .3s; }
+  .button:hover {
+    background-color: var(--first-color-alt); }
+
+/*============ ABOUT ============*/
+.about__data {
+  text-align: center; }
+
+.about__description {
+  margin-bottom: var(--mb-3); }
+
+.about__img {
+  width: 280px;
+  border-radius: .5rem;
+  -ms-grid-column-align: center;
+      justify-self: center; }
+
+/*============ SERVICES ============*/
+.services__container {
+  row-gap: 2.5rem;
+  -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+.services__content {
+  text-align: center; }
+
+.services__img {
+  width: 64px;
+  height: 64px;
+  fill: var(--first-color);
+  margin-bottom: var(--mb-2); }
+
+.services__title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-1); }
+
+.services__description {
+  padding: 0 1.5rem; }
+
+/*============ MENU ============*/
+/*============ APP ============*/
+/*============ CONTACT US ============*/
