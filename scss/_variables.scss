@@ -243,6 +243,7 @@ img{
         justify-self: center;
     }
 }
+
 /*============ BUTTONS ============*/
 .button{
     display: inline-block;
@@ -256,6 +257,7 @@ img{
         background-color: var(--first-color-alt);
     }
 }
+
 /*============ ABOUT ============*/
 .about{
 
@@ -271,6 +273,7 @@ img{
         justify-self: center;
     }
 }
+
 /*============ SERVICES ============*/
 .services{
     &__container{
@@ -296,13 +299,79 @@ img{
     }
 }
 
-
 /*============ MENU ============*/
+.menu{
+    &__container{
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+    &__content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--container-color);
+        border-radius: .5rem;
+        box-shadow: 0 2px 4px rgba(3,74,40,.15);
+        padding: .75rem;
+    }
+    &__img{
+        width: 100px;
+        align-self: center;
+        margin-bottom: var(--mb-2);
+    }
+    .menu__name, 
+    .menu__price{
+        font-weight: var(--font-semi-bold);
+        color: var(--title-color);
+    }
+    &__name{
+        font-size: var(--normal-font-size);
+    }
+    .menu__description, .menu__price{
+        font-size: var(--small-font-size);
+    }
+    &__description{
+        margin-bottom: var(--mb-1);
+    }
+    &__button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        padding: .625rem .813rem;
+        border-radius: .5rem 0 .5rem 0;
+    }
 
-
+}
 
 /*============ APP ============*/
-
+.app{
+    &__data{
+        text-align: center;
+    }
+    &__description{
+        margin-bottom: var(--mb-5);
+    }
+    &__stores{
+        margin-bottom: var(--mb-4);
+    }
+    &__store{
+        width: 120px;
+        margin: 0 var(--mb-1);
+    }
+    &__img{
+        width: 230px;
+        justify-self: center;
+    }
+}
 
 
 /*============ CONTACT US ============*/
+
+
+
+/*============ FOOTER ============*/
+
+
+
+/*============ MEDIA QUERIES ============*/
