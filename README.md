@@ -1,5 +1,5 @@
 # Website-Restaurant-by-Zeki
 
-Beautiful Responsive resume Food Website 📄 using html, css and javascript. 
+Beautiful Responsive Food Website 📄 using html, css(sass) and javascript. 
 
 
